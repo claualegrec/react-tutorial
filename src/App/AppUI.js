@@ -26,6 +26,10 @@ function AppUI({
       />
 
       <TodoList>
+        { error && <p>Desespérate, hubo un error...</p>}
+        { loading && <p>Estamos cargando, no te desesperes...</p>}
+        {/* {(!loading && searchedTodos.length)} */}
+
         {searchedTodos.map(todo => (
           <TodoItem 
             key={todo.text} 
